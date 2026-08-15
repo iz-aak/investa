@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Runtime data
+data/*.sqlite
+data/*.sqlite-journal
+data/*.duckdb
+data/*.duckdb.wal
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+.DS_Store

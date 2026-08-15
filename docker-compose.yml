@@ -1,0 +1,42 @@
+# Two-service compose file: the FastAPI ``api`` and the background ``worker``
+# share a single ``./data`` volume. This mirrors the intended deploy topology
+# on Fly.io / Railway / a small VPS.
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: investa:latest
+    container_name: investa-api
+    env_file: .env
+    environment:
+      DATA_DIR: /app/data
+      SQLITE_PATH: /app/data/investa.sqlite
+      DUCKDB_PATH: /app/data/signals.duckdb
+      UNIVERSES_DIR: /app/data/universes
+    ports:
+      - "8000:8000"
+    volumes:
+      - investa_data:/app/data
+    restart: unless-stopped
+    command: ["uvicorn", "investa.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+  worker:
+    image: investa:latest
+    container_name: investa-worker
+    depends_on:
+      - api
+    env_file: .env
+    environment:
+      DATA_DIR: /app/data
+      SQLITE_PATH: /app/data/investa.sqlite
+      DUCKDB_PATH: /app/data/signals.duckdb
+      UNIVERSES_DIR: /app/data/universes
+    volumes:
+      - investa_data:/app/data
+    restart: unless-stopped
+    command: ["python", "-m", "investa.worker"]
+
+volumes:
+  investa_data:
