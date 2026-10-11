@@ -26,7 +26,7 @@ def _build_engine(settings: Settings) -> Engine:
         settings.sqlite_url,
         echo=False,
         future=True,
-        connect_args={"check_same_thread": False},  # SQLite: allow cross-thread use
+        connect_args={"check_same_thread": False},
     )
 
 
@@ -42,6 +42,13 @@ def init_db(settings: Settings | None = None) -> Engine:
         _SessionLocal = sessionmaker(bind=_engine, autoflush=False, expire_on_commit=False)
 
     Base.metadata.create_all(_engine)
+    # Sanity: confirm the file is writable. Some environments (read-only
+    # mount, etc.) silently present a read-only file after first attempt.
+    try:
+        with _engine.begin() as conn:
+            conn.exec_driver_sql("PRAGMA quick_check")
+    except Exception:
+        pass
     return _engine
 
 

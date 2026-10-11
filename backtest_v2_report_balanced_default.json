@@ -1,0 +1,859 @@
+{
+    "success": true,
+    "data": {
+        "job_id": "d9e0c045-bf1b-4006-a8d7-a3951711e6c6",
+        "status": "done",
+        "n_events": 1382,
+        "report_summary": {
+            "n_events": 1382,
+            "primary_horizon": "6m",
+            "section_a": {
+                "3m": {
+                    "confirmed": 343,
+                    "partial": 562,
+                    "no_reversal": 477,
+                    "unverifiable": 0,
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.2482
+                },
+                "6m": {
+                    "confirmed": 583,
+                    "partial": 501,
+                    "no_reversal": 298,
+                    "unverifiable": 0,
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.4219
+                },
+                "9m": {
+                    "confirmed": 655,
+                    "partial": 512,
+                    "no_reversal": 215,
+                    "unverifiable": 0,
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.474
+                }
+            },
+            "section_b": {
+                "3m": {
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.2482,
+                    "median_days_to_first_fire": 8
+                },
+                "6m": {
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.4219,
+                    "median_days_to_first_fire": 13
+                },
+                "9m": {
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.474,
+                    "median_days_to_first_fire": 14
+                }
+            },
+            "metadata": {
+                "start_date": "2023-01-01 00:00:00",
+                "end_date": "2025-12-31 00:00:00",
+                "primary_horizon": "6m",
+                "horizons_days": {
+                    "3m": 63,
+                    "6m": 126,
+                    "9m": 189
+                },
+                "sustain_days": 5,
+                "tickers_attempted": 50,
+                "tickers_succeeded": 50,
+                "tickers_failed": 0,
+                "duration_seconds": 125.45,
+                "interval": "1d",
+                "mode": "deep_reversal",
+                "warnings": [
+                    "N per band modest.",
+                    "Survivorship bias.",
+                    "Right-edge censoring possible.",
+                    "No costs / slippage modeled.",
+                    "Pure-technical tiers, no fundamentals/news."
+                ]
+            }
+        },
+        "report": {
+            "n_events": 1382,
+            "primary_horizon": "6m",
+            "horizons": [
+                "3m",
+                "6m",
+                "9m"
+            ],
+            "version": "v2-1.0",
+            "section_a_verdict_distribution_by_horizon": {
+                "3m": {
+                    "confirmed": 343,
+                    "partial": 562,
+                    "no_reversal": 477,
+                    "unverifiable": 0,
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.2482
+                },
+                "6m": {
+                    "confirmed": 583,
+                    "partial": 501,
+                    "no_reversal": 298,
+                    "unverifiable": 0,
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.4219
+                },
+                "9m": {
+                    "confirmed": 655,
+                    "partial": 512,
+                    "no_reversal": 215,
+                    "unverifiable": 0,
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.474
+                }
+            },
+            "section_b_reversal_rate_by_horizon": {
+                "3m": {
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.2482,
+                    "median_days_to_first_fire": 8
+                },
+                "6m": {
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.4219,
+                    "median_days_to_first_fire": 13
+                },
+                "9m": {
+                    "verifiable_n": 1382,
+                    "confirmation_rate": 0.474,
+                    "median_days_to_first_fire": 14
+                }
+            },
+            "section_c_per_band_at_3m_6m_9m": {
+                "6m": [
+                    {
+                        "band": "Weak",
+                        "emoji": "🔴",
+                        "n_events": 1334,
+                        "n_verifiable": 1334,
+                        "confirmed": 564,
+                        "confirmation_rate": 0.4228
+                    },
+                    {
+                        "band": "Moderate",
+                        "emoji": "🟡",
+                        "n_events": 47,
+                        "n_verifiable": 47,
+                        "confirmed": 19,
+                        "confirmation_rate": 0.4043
+                    },
+                    {
+                        "band": "Strong",
+                        "emoji": "🟠",
+                        "n_events": 1,
+                        "n_verifiable": 1,
+                        "confirmed": 0,
+                        "confirmation_rate": 0.0
+                    },
+                    {
+                        "band": "Very Strong",
+                        "emoji": "🟢",
+                        "n_events": 0,
+                        "n_verifiable": 0,
+                        "confirmed": 0,
+                        "confirmation_rate": null
+                    },
+                    {
+                        "band": "Conviction",
+                        "emoji": "⚡",
+                        "n_events": 0,
+                        "n_verifiable": 0,
+                        "confirmed": 0,
+                        "confirmation_rate": null
+                    }
+                ],
+                "3m": [
+                    {
+                        "band": "Weak",
+                        "emoji": "🔴",
+                        "n_events": 1334,
+                        "n_verifiable": 1334,
+                        "confirmed": 335,
+                        "confirmation_rate": 0.2511
+                    },
+                    {
+                        "band": "Moderate",
+                        "emoji": "🟡",
+                        "n_events": 47,
+                        "n_verifiable": 47,
+                        "confirmed": 8,
+                        "confirmation_rate": 0.1702
+                    },
+                    {
+                        "band": "Strong",
+                        "emoji": "🟠",
+                        "n_events": 1,
+                        "n_verifiable": 1,
+                        "confirmed": 0,
+                        "confirmation_rate": 0.0
+                    },
+                    {
+                        "band": "Very Strong",
+                        "emoji": "🟢",
+                        "n_events": 0,
+                        "n_verifiable": 0,
+                        "confirmed": 0,
+                        "confirmation_rate": null
+                    },
+                    {
+                        "band": "Conviction",
+                        "emoji": "⚡",
+                        "n_events": 0,
+                        "n_verifiable": 0,
+                        "confirmed": 0,
+                        "confirmation_rate": null
+                    }
+                ],
+                "9m": [
+                    {
+                        "band": "Weak",
+                        "emoji": "🔴",
+                        "n_events": 1334,
+                        "n_verifiable": 1334,
+                        "confirmed": 636,
+                        "confirmation_rate": 0.4768
+                    },
+                    {
+                        "band": "Moderate",
+                        "emoji": "🟡",
+                        "n_events": 47,
+                        "n_verifiable": 47,
+                        "confirmed": 19,
+                        "confirmation_rate": 0.4043
+                    },
+                    {
+                        "band": "Strong",
+                        "emoji": "🟠",
+                        "n_events": 1,
+                        "n_verifiable": 1,
+                        "confirmed": 0,
+                        "confirmation_rate": 0.0
+                    },
+                    {
+                        "band": "Very Strong",
+                        "emoji": "🟢",
+                        "n_events": 0,
+                        "n_verifiable": 0,
+                        "confirmed": 0,
+                        "confirmation_rate": null
+                    },
+                    {
+                        "band": "Conviction",
+                        "emoji": "⚡",
+                        "n_events": 0,
+                        "n_verifiable": 0,
+                        "confirmed": 0,
+                        "confirmation_rate": null
+                    }
+                ]
+            },
+            "section_d_per_signal_contribution_at_6m": {
+                "bollinger": {
+                    "fire_rate": 0.0832,
+                    "mean_on": 0.097159,
+                    "mean_off": 0.086791,
+                    "delta": 0.010369,
+                    "t_stat": 0.4838
+                },
+                "macd": {
+                    "fire_rate": 0.1809,
+                    "mean_on": 0.088686,
+                    "mean_off": 0.087425,
+                    "delta": 0.001261,
+                    "t_stat": 0.0831
+                },
+                "obv": {
+                    "fire_rate": 0.1252,
+                    "mean_on": 0.07442,
+                    "mean_off": 0.089547,
+                    "delta": -0.015127,
+                    "t_stat": -0.8644
+                },
+                "rsi": {
+                    "fire_rate": 0.1903,
+                    "mean_on": 0.098652,
+                    "mean_off": 0.085068,
+                    "delta": 0.013583,
+                    "t_stat": 0.9249
+                },
+                "stochastic": {
+                    "fire_rate": 0.2438,
+                    "mean_on": 0.09683,
+                    "mean_off": 0.084694,
+                    "delta": 0.012137,
+                    "t_stat": 0.9118
+                },
+                "volume": {
+                    "fire_rate": 0.063,
+                    "mean_on": 0.079081,
+                    "mean_off": 0.088229,
+                    "delta": -0.009149,
+                    "t_stat": -0.4995
+                },
+                "weekly": {
+                    "fire_rate": 0.4537,
+                    "mean_on": 0.095107,
+                    "mean_off": 0.081463,
+                    "delta": 0.013644,
+                    "t_stat": 1.1611
+                }
+            },
+            "section_e_per_tier_fire_rates_by_horizon": {
+                "3m": {
+                    "golden_cross": {
+                        "fires": 494,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.3575,
+                        "median_days_to_fire": 14
+                    },
+                    "ema50_reclaim": {
+                        "fires": 720,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.521,
+                        "median_days_to_fire": 11
+                    },
+                    "swing": {
+                        "fires": 83,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.0601,
+                        "median_days_to_fire": 13
+                    }
+                },
+                "6m": {
+                    "golden_cross": {
+                        "fires": 848,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.6136,
+                        "median_days_to_fire": 22
+                    },
+                    "ema50_reclaim": {
+                        "fires": 731,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.5289,
+                        "median_days_to_fire": 12
+                    },
+                    "swing": {
+                        "fires": 212,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.1534,
+                        "median_days_to_fire": 17
+                    }
+                },
+                "9m": {
+                    "golden_cross": {
+                        "fires": 968,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.7004,
+                        "median_days_to_fire": 28
+                    },
+                    "ema50_reclaim": {
+                        "fires": 708,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.5123,
+                        "median_days_to_fire": 13
+                    },
+                    "swing": {
+                        "fires": 350,
+                        "verifiable_n": 1382,
+                        "fire_rate": 0.2533,
+                        "median_days_to_fire": 20
+                    }
+                }
+            },
+            "section_f_per_ticker_rollup_at_6m": [
+                {
+                    "ticker": "AAPL",
+                    "n_verifiable": 18,
+                    "confirmed": 18,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 7.9355,
+                    "median_days_to_fire": 14
+                },
+                {
+                    "ticker": "MCD",
+                    "n_verifiable": 18,
+                    "confirmed": 18,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 12.7286,
+                    "median_days_to_fire": 43
+                },
+                {
+                    "ticker": "KO",
+                    "n_verifiable": 13,
+                    "confirmed": 13,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 9.7563,
+                    "median_days_to_fire": 17
+                },
+                {
+                    "ticker": "MSFT",
+                    "n_verifiable": 11,
+                    "confirmed": 11,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 11.2545,
+                    "median_days_to_fire": 13
+                },
+                {
+                    "ticker": "LIN",
+                    "n_verifiable": 10,
+                    "confirmed": 10,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 23.4596,
+                    "median_days_to_fire": 43
+                },
+                {
+                    "ticker": "ABBV",
+                    "n_verifiable": 9,
+                    "confirmed": 9,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 8.8173,
+                    "median_days_to_fire": 12
+                },
+                {
+                    "ticker": "AMZN",
+                    "n_verifiable": 8,
+                    "confirmed": 8,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 6.6929,
+                    "median_days_to_fire": 8
+                },
+                {
+                    "ticker": "CAT",
+                    "n_verifiable": 7,
+                    "confirmed": 7,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 9.3526,
+                    "median_days_to_fire": 13
+                },
+                {
+                    "ticker": "IBM",
+                    "n_verifiable": 7,
+                    "confirmed": 7,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 0.8142,
+                    "median_days_to_fire": 17
+                },
+                {
+                    "ticker": "NVDA",
+                    "n_verifiable": 4,
+                    "confirmed": 4,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 8.75,
+                    "median_days_to_fire": 6
+                },
+                {
+                    "ticker": "ORCL",
+                    "n_verifiable": 3,
+                    "confirmed": 3,
+                    "confirmation_rate": 1.0,
+                    "avg_score": 10.3333,
+                    "median_days_to_fire": 8
+                },
+                {
+                    "ticker": "LLY",
+                    "n_verifiable": 18,
+                    "confirmed": 17,
+                    "confirmation_rate": 0.9444,
+                    "avg_score": 7.2143,
+                    "median_days_to_fire": 20
+                },
+                {
+                    "ticker": "MS",
+                    "n_verifiable": 14,
+                    "confirmed": 13,
+                    "confirmation_rate": 0.9286,
+                    "avg_score": 8.537,
+                    "median_days_to_fire": 6
+                },
+                {
+                    "ticker": "RTX",
+                    "n_verifiable": 12,
+                    "confirmed": 11,
+                    "confirmation_rate": 0.9167,
+                    "avg_score": 18.0884,
+                    "median_days_to_fire": 26
+                },
+                {
+                    "ticker": "SO",
+                    "n_verifiable": 12,
+                    "confirmed": 11,
+                    "confirmation_rate": 0.9167,
+                    "avg_score": 7.0136,
+                    "median_days_to_fire": 11
+                },
+                {
+                    "ticker": "WFC",
+                    "n_verifiable": 14,
+                    "confirmed": 12,
+                    "confirmation_rate": 0.8571,
+                    "avg_score": 7.6422,
+                    "median_days_to_fire": 10
+                },
+                {
+                    "ticker": "TSLA",
+                    "n_verifiable": 28,
+                    "confirmed": 23,
+                    "confirmation_rate": 0.8214,
+                    "avg_score": 12.9039,
+                    "median_days_to_fire": 18
+                },
+                {
+                    "ticker": "XOM",
+                    "n_verifiable": 24,
+                    "confirmed": 19,
+                    "confirmation_rate": 0.7917,
+                    "avg_score": 5.5024,
+                    "median_days_to_fire": 10
+                },
+                {
+                    "ticker": "GOOGL",
+                    "n_verifiable": 13,
+                    "confirmed": 10,
+                    "confirmation_rate": 0.7692,
+                    "avg_score": 5.5033,
+                    "median_days_to_fire": 7
+                },
+                {
+                    "ticker": "EQIX",
+                    "n_verifiable": 29,
+                    "confirmed": 22,
+                    "confirmation_rate": 0.7586,
+                    "avg_score": 9.5101,
+                    "median_days_to_fire": 36
+                },
+                {
+                    "ticker": "HON",
+                    "n_verifiable": 26,
+                    "confirmed": 19,
+                    "confirmation_rate": 0.7308,
+                    "avg_score": 6.2112,
+                    "median_days_to_fire": 8
+                },
+                {
+                    "ticker": "BLK",
+                    "n_verifiable": 11,
+                    "confirmed": 8,
+                    "confirmation_rate": 0.7273,
+                    "avg_score": 11.2553,
+                    "median_days_to_fire": 9
+                },
+                {
+                    "ticker": "JNJ",
+                    "n_verifiable": 40,
+                    "confirmed": 28,
+                    "confirmation_rate": 0.7,
+                    "avg_score": 12.7231,
+                    "median_days_to_fire": 11
+                },
+                {
+                    "ticker": "GS",
+                    "n_verifiable": 16,
+                    "confirmed": 11,
+                    "confirmation_rate": 0.6875,
+                    "avg_score": 5.5724,
+                    "median_days_to_fire": 6
+                },
+                {
+                    "ticker": "HD",
+                    "n_verifiable": 28,
+                    "confirmed": 17,
+                    "confirmation_rate": 0.6071,
+                    "avg_score": 6.7128,
+                    "median_days_to_fire": 7
+                },
+                {
+                    "ticker": "DIS",
+                    "n_verifiable": 44,
+                    "confirmed": 26,
+                    "confirmation_rate": 0.5909,
+                    "avg_score": 9.5441,
+                    "median_days_to_fire": 15
+                },
+                {
+                    "ticker": "PLD",
+                    "n_verifiable": 40,
+                    "confirmed": 20,
+                    "confirmation_rate": 0.5,
+                    "avg_score": 13.2799,
+                    "median_days_to_fire": 11
+                },
+                {
+                    "ticker": "CVX",
+                    "n_verifiable": 28,
+                    "confirmed": 14,
+                    "confirmation_rate": 0.5,
+                    "avg_score": 7.0189,
+                    "median_days_to_fire": 13
+                },
+                {
+                    "ticker": "BAC",
+                    "n_verifiable": 31,
+                    "confirmed": 15,
+                    "confirmation_rate": 0.4839,
+                    "avg_score": 10.8576,
+                    "median_days_to_fire": 18
+                },
+                {
+                    "ticker": "CSCO",
+                    "n_verifiable": 21,
+                    "confirmed": 10,
+                    "confirmation_rate": 0.4762,
+                    "avg_score": 4.125,
+                    "median_days_to_fire": 30
+                },
+                {
+                    "ticker": "FCX",
+                    "n_verifiable": 24,
+                    "confirmed": 10,
+                    "confirmation_rate": 0.4167,
+                    "avg_score": 13.0787,
+                    "median_days_to_fire": 21
+                },
+                {
+                    "ticker": "UNH",
+                    "n_verifiable": 60,
+                    "confirmed": 24,
+                    "confirmation_rate": 0.4,
+                    "avg_score": 12.9773,
+                    "median_days_to_fire": 15
+                },
+                {
+                    "ticker": "PEP",
+                    "n_verifiable": 51,
+                    "confirmed": 17,
+                    "confirmation_rate": 0.3333,
+                    "avg_score": 11.1911,
+                    "median_days_to_fire": 10
+                },
+                {
+                    "ticker": "AMT",
+                    "n_verifiable": 58,
+                    "confirmed": 19,
+                    "confirmation_rate": 0.3276,
+                    "avg_score": 11.4437,
+                    "median_days_to_fire": 18
+                },
+                {
+                    "ticker": "NEE",
+                    "n_verifiable": 56,
+                    "confirmed": 16,
+                    "confirmation_rate": 0.2857,
+                    "avg_score": 8.6847,
+                    "median_days_to_fire": 9
+                },
+                {
+                    "ticker": "ADBE",
+                    "n_verifiable": 62,
+                    "confirmed": 14,
+                    "confirmation_rate": 0.2258,
+                    "avg_score": 13.6433,
+                    "median_days_to_fire": 13
+                },
+                {
+                    "ticker": "COP",
+                    "n_verifiable": 54,
+                    "confirmed": 11,
+                    "confirmation_rate": 0.2037,
+                    "avg_score": 8.3242,
+                    "median_days_to_fire": 42
+                },
+                {
+                    "ticker": "APD",
+                    "n_verifiable": 43,
+                    "confirmed": 8,
+                    "confirmation_rate": 0.186,
+                    "avg_score": 9.7956,
+                    "median_days_to_fire": 10
+                },
+                {
+                    "ticker": "DUK",
+                    "n_verifiable": 24,
+                    "confirmed": 4,
+                    "confirmation_rate": 0.1667,
+                    "avg_score": 7.0907,
+                    "median_days_to_fire": 5
+                },
+                {
+                    "ticker": "NKE",
+                    "n_verifiable": 85,
+                    "confirmed": 14,
+                    "confirmation_rate": 0.1647,
+                    "avg_score": 12.9481,
+                    "median_days_to_fire": 15
+                },
+                {
+                    "ticker": "UPS",
+                    "n_verifiable": 82,
+                    "confirmed": 13,
+                    "confirmation_rate": 0.1585,
+                    "avg_score": 10.2772,
+                    "median_days_to_fire": 24
+                },
+                {
+                    "ticker": "PG",
+                    "n_verifiable": 28,
+                    "confirmed": 3,
+                    "confirmation_rate": 0.1071,
+                    "avg_score": 6.5129,
+                    "median_days_to_fire": 5
+                },
+                {
+                    "ticker": "CRM",
+                    "n_verifiable": 29,
+                    "confirmed": 3,
+                    "confirmation_rate": 0.1034,
+                    "avg_score": 7.1961,
+                    "median_days_to_fire": 1
+                },
+                {
+                    "ticker": "PFE",
+                    "n_verifiable": 88,
+                    "confirmed": 7,
+                    "confirmation_rate": 0.0795,
+                    "avg_score": 12.1817,
+                    "median_days_to_fire": 6
+                },
+                {
+                    "ticker": "CCI",
+                    "n_verifiable": 76,
+                    "confirmed": 6,
+                    "confirmation_rate": 0.0789,
+                    "avg_score": 13.424,
+                    "median_days_to_fire": 4
+                },
+                {
+                    "ticker": "NFLX",
+                    "n_verifiable": 3,
+                    "confirmed": 0,
+                    "confirmation_rate": 0.0,
+                    "avg_score": 23.5952,
+                    "median_days_to_fire": null
+                },
+                {
+                    "ticker": "META",
+                    "n_verifiable": 2,
+                    "confirmed": 0,
+                    "confirmation_rate": 0.0,
+                    "avg_score": 0.0,
+                    "median_days_to_fire": null
+                }
+            ],
+            "section_g_cross_check_returns_by_verdict_at_6m": {
+                "confirmed_reversal": {
+                    "3m": {
+                        "mean": 0.153823,
+                        "std": 0.149809,
+                        "n": 583,
+                        "se": 0.006204,
+                        "ci_low": 0.141662,
+                        "ci_high": 0.165983
+                    },
+                    "6m": {
+                        "mean": 0.227513,
+                        "std": 0.215661,
+                        "n": 583,
+                        "se": 0.008932,
+                        "ci_low": 0.210006,
+                        "ci_high": 0.245019
+                    },
+                    "9m": {
+                        "mean": 0.287627,
+                        "std": 0.278501,
+                        "n": 557,
+                        "se": 0.0118,
+                        "ci_low": 0.264498,
+                        "ci_high": 0.310756
+                    }
+                },
+                "partial_reversal": {
+                    "3m": {
+                        "mean": 0.014358,
+                        "std": 0.138378,
+                        "n": 501,
+                        "se": 0.006182,
+                        "ci_low": 0.002241,
+                        "ci_high": 0.026475
+                    },
+                    "6m": {
+                        "mean": 0.021656,
+                        "std": 0.156779,
+                        "n": 501,
+                        "se": 0.007004,
+                        "ci_low": 0.007928,
+                        "ci_high": 0.035385
+                    },
+                    "9m": {
+                        "mean": 0.031052,
+                        "std": 0.216006,
+                        "n": 485,
+                        "se": 0.009808,
+                        "ci_low": 0.011828,
+                        "ci_high": 0.050277
+                    }
+                },
+                "no_reversal": {
+                    "3m": {
+                        "mean": -0.046719,
+                        "std": 0.077521,
+                        "n": 298,
+                        "se": 0.004491,
+                        "ci_low": -0.055521,
+                        "ci_high": -0.037918
+                    },
+                    "6m": {
+                        "mean": -0.075008,
+                        "std": 0.124169,
+                        "n": 298,
+                        "se": 0.007193,
+                        "ci_low": -0.089107,
+                        "ci_high": -0.06091
+                    },
+                    "9m": {
+                        "mean": -0.039366,
+                        "std": 0.183509,
+                        "n": 286,
+                        "se": 0.010851,
+                        "ci_low": -0.060634,
+                        "ci_high": -0.018098
+                    }
+                }
+            },
+            "metadata": {
+                "start_date": "2023-01-01 00:00:00",
+                "end_date": "2025-12-31 00:00:00",
+                "primary_horizon": "6m",
+                "horizons_days": {
+                    "3m": 63,
+                    "6m": 126,
+                    "9m": 189
+                },
+                "sustain_days": 5,
+                "tickers_attempted": 50,
+                "tickers_succeeded": 50,
+                "tickers_failed": 0,
+                "duration_seconds": 125.45,
+                "interval": "1d",
+                "mode": "deep_reversal",
+                "warnings": [
+                    "N per band modest.",
+                    "Survivorship bias.",
+                    "Right-edge censoring possible.",
+                    "No costs / slippage modeled.",
+                    "Pure-technical tiers, no fundamentals/news."
+                ]
+            },
+            "failed_tickers": []
+        }
+    },
+    "meta": {
+        "generated_at": "2026-08-29T19:11:50.829350+00:00"
+    }
+}

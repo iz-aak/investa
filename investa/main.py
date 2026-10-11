@@ -12,7 +12,20 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from .api.backtest import router as backtest_router
+from .backtest_v2.api_routes import router as backtest_v2_router
+from .backtest_v2 import models as _v2_models  # noqa: F401 — registers BacktestV2Job
+from .data.duckdb_store import init_duckdb
 from .api.health import router as health_router
+from .api.screener import router as screener_router
+from .config import get_settings
+from .api.backtest import router as backtest_router
+from .api.health import router as health_router
+from .api.screener import router as screener_router
+from .backtest_v2.api_routes import router as backtest_v2_router
+from .config import get_settings
+from .api.health import router as health_router
+from .api.screener import router as screener_router
 from .config import get_settings
 from .data.duckdb_store import init_duckdb
 from .database import init_db
@@ -57,6 +70,9 @@ def create_app() -> FastAPI:
     )
 
     app.include_router(health_router)
+    app.include_router(screener_router)
+    app.include_router(backtest_router)
+    app.include_router(backtest_v2_router)
     return app
 
 
