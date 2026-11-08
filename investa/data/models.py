@@ -103,3 +103,22 @@ class MarketContextSnapshot(Base):
     regime: Mapped[str] = mapped_column(String(16))  # risk_on|risk_off|neutral
     payload: Mapped[dict] = mapped_column(JSON)
     score: Mapped[float] = mapped_column(Float, default=0.0)
+
+
+class UniverseSnapshot(Base):
+    """Current eligible US-listed common stock universe.
+
+    Each rebuild deletes the prior row and inserts a fresh snapshot (single-row
+    design for Stage 1 v1). The full ticker list + per-stage stats live in
+    JSON columns so we can rebuild the entire universe in one round-trip.
+    """
+
+    __tablename__ = "universe_snapshots"
+
+    id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    rebuilt_at: Mapped[datetime] = mapped_column(
+        DateTime(timezone=True), default=_utcnow, index=True
+    )
+    exchange_scope: Mapped[str] = mapped_column(String(64))
+    tickers: Mapped[list[dict]] = mapped_column(JSON)
+    stats: Mapped[dict] = mapped_column(JSON, default=dict)

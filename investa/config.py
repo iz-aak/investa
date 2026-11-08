@@ -67,6 +67,24 @@ class Settings(BaseSettings):
     scan_cron_close: str = "5 16 * * 1-5"
     market_context_cron: str = "0 7 * * 1"
 
+    # ── Universe (Stage 1) ──────────────────────────────────────
+    # Filtering thresholds applied when building the eligible US ticker
+    # universe from the NASDAQ symbol directory. All overridable per-call
+    # via POST /api/universe/rebuild.
+    universe_min_avg_volume_usd: int = 1_000_000
+    universe_min_share_price: float = 3.0
+    universe_min_market_cap: int = 50_000_000
+    universe_min_history_days: int = 250
+    universe_max_sector_pct: float = 0.20
+    universe_batch_size: int = 50
+    universe_batch_delay_seconds: float = 0.3
+    universe_nasdaq_listed_url: str = (
+        "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt"
+    )
+    universe_other_listed_url: str = (
+        "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
+    )
+
     # ── Cache ───────────────────────────────────────────────────
     yf_cache_ttl_seconds: int = 900
     ticker_validation_ttl_seconds: int = 86_400
